@@ -1,5 +1,12 @@
 import { useEffect, useState } from 'react';
 
+const BrandName = () => (
+  <span>
+    <span style={{ color: 'var(--color-primary)', fontWeight: '900', fontStyle: 'italic', fontSize: '1.2em' }}>D</span>h
+    <span style={{ color: 'var(--color-primary)', fontWeight: '900', fontStyle: 'italic', fontSize: '1.2em' }}>A</span>nshu Arts
+  </span>
+);
+
 function App() {
   const [scrolled, setScrolled] = useState(false);
 
@@ -38,7 +45,7 @@ function App() {
         <nav className="navbar" style={{ padding: scrolled ? '1rem 0' : '2rem 0', transition: 'all 0.3s ease' }}>
           <div className="navbar-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <img src="/logo.png" alt="DhAnshu Arts Logo" style={{ height: '45px', width: 'auto', mixBlendMode: 'multiply' }} />
-            DhAnshu Arts
+            <BrandName />
           </div>
           <ul className="navbar-links">
             <li><a href="#home">Home</a></li>
@@ -113,7 +120,7 @@ function App() {
         <div className="container">
           <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', gap: '10px', marginBottom: '1rem' }}>
             <img src="/logo.png" alt="DhAnshu Arts Logo" style={{ height: '50px', width: 'auto', mixBlendMode: 'multiply' }} />
-            <h2 className="navbar-logo" style={{ margin: 0, fontSize: '1.5rem' }}>DhAnshu Arts</h2>
+            <h2 className="navbar-logo" style={{ margin: 0, fontSize: '1.5rem' }}><BrandName /></h2>
           </div>
           <p>© {new Date().getFullYear()} DhAnshu Arts. All rights reserved.</p>
           <p style={{ marginTop: '0.5rem' }}>Handcrafted in India</p>

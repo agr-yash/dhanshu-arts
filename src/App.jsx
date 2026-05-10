@@ -36,7 +36,7 @@ function App() {
     <>
       <div className="container">
         <nav className="navbar" style={{ padding: scrolled ? '1rem 0' : '2rem 0', transition: 'all 0.3s ease' }}>
-          <div className="navbar-logo">KALA MANCH</div>
+          <div className="navbar-logo">DHANSHU ARTS</div>
           <ul className="navbar-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#gallery">Gallery</a></li>
@@ -108,8 +108,8 @@ function App() {
 
       <footer className="footer">
         <div className="container">
-          <h2 className="navbar-logo" style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>KALA MANCH</h2>
-          <p>© {new Date().getFullYear()} Kala Manch Traditional Art. All rights reserved.</p>
+          <h2 className="navbar-logo" style={{ marginBottom: '1rem', fontSize: '1.5rem' }}>DHANSHU ARTS</h2>
+          <p>© {new Date().getFullYear()} DhAnshu Arts. All rights reserved.</p>
           <p style={{ marginTop: '0.5rem' }}>Handcrafted in India</p>
         </div>
       </footer>

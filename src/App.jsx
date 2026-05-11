@@ -15,7 +15,21 @@ function App() {
       setScrolled(window.scrollY > 50);
     };
     window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+        }
+      });
+    }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
+
+    document.querySelectorAll('.animate-on-scroll').forEach(el => observer.observe(el));
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+      observer.disconnect();
+    };
   }, []);
 
   const paintings = [
@@ -76,7 +90,7 @@ function App() {
 
       <section id="home" className="section container" style={{ paddingTop: '2rem', position: 'relative', zIndex: 10 }}>
           <div className="hero">
-            <div className="hero-content glass-panel">
+            <div className="hero-content glass-panel animate-on-scroll fade-up">
               <span style={{ display: 'inline-block', marginBottom: '1rem', color: 'var(--color-primary)', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>The Essence of Devbhoomi</span>
               <h1 className="hero-title">Timeless Art,<br/>Handcrafted with Love.</h1>
               <p className="hero-subtitle">
@@ -84,8 +98,8 @@ function App() {
               </p>
               <a href="#gallery" className="btn">Explore Gallery</a>
             </div>
-            <div className="hero-image-wrapper">
-              <img src="/painting1.png" alt="Hero Featured Painting" className="hero-image" />
+            <div className="hero-image-wrapper animate-on-scroll fade-scale stagger-2">
+              <img src="/painting1.png" alt="Hero Featured Painting" className="hero-image aipan-border" />
             </div>
           </div>
         </section>
@@ -95,14 +109,14 @@ function App() {
 
         <section id="gallery" className="gallery-section section">
           <div className="container">
-            <h2 style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '1rem' }}>The Collection</h2>
-            <p style={{ textAlign: 'center', color: 'var(--color-text-light)', maxWidth: '600px', margin: '0 auto' }}>
+            <h2 className="animate-on-scroll fade-up" style={{ textAlign: 'center', fontSize: '2.5rem', marginBottom: '1rem' }}>The Collection</h2>
+            <p className="animate-on-scroll fade-up stagger-1" style={{ textAlign: 'center', color: 'var(--color-text-light)', maxWidth: '600px', margin: '0 auto' }}>
               A curated selection of authentic, handmade artworks bringing cultural richness to modern spaces.
             </p>
             
             <div className="gallery-grid">
-              {paintings.map(painting => (
-                <div key={painting.id} className="painting-card">
+              {paintings.map((painting, index) => (
+                <div key={painting.id} className={`painting-card animate-on-scroll fade-up stagger-${(index % 5) + 1}`}>
                   <div className="painting-img-wrapper">
                     <img src={painting.img} alt={painting.title} />
                   </div>
@@ -123,12 +137,12 @@ function App() {
           </div>
         </section>
         
-        <section id="about" className="section container" style={{ marginTop: '4rem', marginBottom: '4rem' }}>
+        <section id="about" className="section container animate-on-scroll fade-up" style={{ marginTop: '4rem', marginBottom: '4rem' }}>
           <div style={{ display: 'flex', gap: '4rem', alignItems: 'center', flexWrap: 'wrap' }}>
-            <div style={{ flex: 1, minWidth: '300px' }}>
-              <img src="/painting3.png" alt="Artist at work" style={{ borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }} />
+            <div style={{ flex: 1, minWidth: '300px' }} className="animate-on-scroll fade-scale stagger-1">
+              <img src="/painting3.png" alt="Artist at work" className="aipan-border" style={{ borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)' }} />
             </div>
-            <div style={{ flex: 1, minWidth: '300px' }}>
+            <div style={{ flex: 1, minWidth: '300px' }} className="animate-on-scroll fade-up stagger-2">
               <h2 style={{ fontSize: '2.5rem' }}>Our Heritage</h2>
               <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--color-text-light)' }}>
                 Founded by Anshu and Dheeraj Agarwal—a lovely couple united by their profound love for art—DhAnshu Arts is a testament to India's rich cultural legacy. For over three decades, they have dedicated their lives to preserving and promoting traditional art forms. What started as a shared passion has blossomed into a magnificent collection of exquisite handmade paintings.
@@ -142,21 +156,21 @@ function App() {
 
         <section id="policies" className="section container" style={{ marginTop: '2rem', marginBottom: '4rem' }}>
           <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', textAlign: 'center' }}>
-            <div style={{ padding: '2.5rem 1.5rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', borderTop: '3px solid var(--color-accent)' }}>
+            <div className="animate-on-scroll fade-up stagger-1" style={{ padding: '2.5rem 1.5rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', borderTop: '3px solid var(--color-accent)' }}>
               <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>Transparent Pricing</h3>
               <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem' }}>Our authentic art pieces are fairly and transparently priced, reflecting hundreds of hours of intricate craftsmanship and the use of premium, genuine materials.</p>
             </div>
-            <div style={{ padding: '2.5rem 1.5rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', borderTop: '3px solid var(--color-accent)' }}>
+            <div className="animate-on-scroll fade-up stagger-2" style={{ padding: '2.5rem 1.5rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', borderTop: '3px solid var(--color-accent)' }}>
               <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>Fast Delivery</h3>
               <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem' }}>We ensure safe, fully insured <strong>Pan-India delivery within 7 working days</strong>. Your masterpiece will be meticulously packaged and delivered right to your doorstep.</p>
             </div>
-            <div style={{ padding: '2.5rem 1.5rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', borderTop: '3px solid var(--color-accent)' }}>
+            <div className="animate-on-scroll fade-up stagger-3" style={{ padding: '2.5rem 1.5rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', borderTop: '3px solid var(--color-accent)' }}>
               <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>Purchase Policy</h3>
               <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem' }}>To maintain the exclusivity and pristine gallery condition of our handcrafted paintings, all sales are final. We maintain a strict <strong>no return, no exchange</strong> policy.</p>
             </div>
           </div>
         </section>
-        <section id="contact" className="section container" style={{ backgroundColor: 'white', padding: '4rem 2rem', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', marginBottom: '4rem', textAlign: 'center', borderTop: '4px solid var(--color-accent)' }}>
+        <section id="contact" className="section container animate-on-scroll fade-up" style={{ backgroundColor: 'white', padding: '4rem 2rem', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', marginBottom: '4rem', textAlign: 'center', borderTop: '4px solid var(--color-accent)' }}>
           <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--color-secondary)' }}>Visit Our Studio</h2>
           <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
             We'd love to welcome you. Experience the rich heritage of our artwork in person or reach out for commissions and inquiries.

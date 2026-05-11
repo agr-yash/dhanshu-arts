@@ -233,12 +233,12 @@ img {
   box-shadow: var(--box-shadow);
   cursor: pointer;
   background-color: var(--color-bg);
-  transition: var(--transition);
+  transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 .painting-card:hover {
-  transform: translateY(-10px);
-  box-shadow: var(--box-shadow-hover);
+  transform: translateY(-15px) scale(1.02);
+  box-shadow: 0 25px 50px rgba(140, 58, 58, 0.15);
 }
 
 .painting-img-wrapper {
@@ -305,4 +305,54 @@ img {
     flex-direction: column;
     gap: var(--spacing-md);
   }
+}
+
+/* Premium CSS Animations & Traditional Touches */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(40px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatSubtle {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+.animate-on-scroll {
+  opacity: 0;
+  transition: opacity 0.8s cubic-bezier(0.165, 0.84, 0.44, 1), transform 0.8s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+.fade-up { transform: translateY(40px); }
+.fade-scale { transform: scale(0.95); }
+
+.stagger-1 { transition-delay: 0.1s; }
+.stagger-2 { transition-delay: 0.2s; }
+.stagger-3 { transition-delay: 0.3s; }
+.stagger-4 { transition-delay: 0.4s; }
+.stagger-5 { transition-delay: 0.5s; }
+
+.hero-image {
+  animation: floatSubtle 6s ease-in-out infinite;
+}
+
+/* Aipan Traditional Border Style */
+.aipan-border {
+  position: relative;
+  border: 4px solid var(--color-primary);
+  padding: 4px;
+  background-clip: content-box;
+}
+.aipan-border::after {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; bottom: 0;
+  border: 1px solid white;
+  pointer-events: none;
 }

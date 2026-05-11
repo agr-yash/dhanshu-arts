@@ -57,8 +57,7 @@ function App() {
         </nav>
       </div>
 
-      <main>
-        <section id="home" className="section container" style={{ paddingTop: '2rem' }}>
+      <section id="home" className="section container" style={{ paddingTop: '2rem', position: 'relative', zIndex: 10 }}>
           <div className="hero">
             <div className="hero-content glass-panel">
               <span style={{ display: 'inline-block', marginBottom: '1rem', color: 'var(--color-primary)', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>The Essence of Devbhoomi</span>
@@ -74,6 +73,8 @@ function App() {
           </div>
         </section>
       </div>
+
+      <main>
 
         <section id="gallery" className="gallery-section section">
           <div className="container">

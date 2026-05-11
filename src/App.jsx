@@ -35,6 +35,20 @@ function App() {
     },
     {
       id: 3,
+      title: 'Devbhoomi Folk Celebration',
+      medium: 'Pahari Style • Natural Stone Colors on Canvas',
+      price: '₹15,000 INR',
+      img: '/uttarakhand_1.png'
+    },
+    {
+      id: 4,
+      title: 'Himalayan Temple Serenity',
+      medium: 'Garhwal School • Watercolors with Gold Detail',
+      price: '₹9,500 INR',
+      img: '/uttarakhand_2.png'
+    },
+    {
+      id: 5,
       title: 'Divine Lotus Pond',
       medium: 'Traditional Watercolor • Fine Canvas',
       price: '₹8,200 INR',
@@ -98,8 +112,9 @@ function App() {
                     <div style={{ fontSize: '1.4rem', fontWeight: 'bold', color: 'var(--color-primary)', marginTop: '0.8rem', letterSpacing: '0.5px' }}>
                       {painting.price}
                     </div>
-                    <a href={`mailto:contact@dhanshuarts.com?subject=Purchase Inquiry: ${painting.title}`} className="btn" style={{ marginTop: '1rem', width: '100%', fontSize: '0.9rem', padding: '10px', display: 'inline-block', textAlign: 'center', boxSizing: 'border-box', fontWeight: 'bold' }}>
-                      Purchase Inquiry
+                    <a href={`https://wa.me/919760046127?text=${encodeURIComponent(`Namaste DhAnshu Arts! 🙏 I am interested in purchasing the painting '${painting.title}' (${painting.price}). Can you please confirm its availability?`)}`} target="_blank" rel="noopener noreferrer" className="btn" style={{ marginTop: '1rem', width: '100%', fontSize: '0.9rem', padding: '10px', display: 'inline-flex', alignItems: 'center', justifyContent: 'center', gap: '8px', boxSizing: 'border-box', fontWeight: 'bold', backgroundColor: '#25D366', color: 'white', border: 'none' }}>
+                      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"></path></svg>
+                      Buy via WhatsApp
                     </a>
                   </div>
                 </div>
@@ -133,11 +148,11 @@ function App() {
             </div>
             <div style={{ padding: '2.5rem 1.5rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', borderTop: '3px solid var(--color-accent)' }}>
               <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>Fast Delivery</h3>
-              <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem' }}>We ensure safe, fully insured **Pan-India delivery within 7 working days**. Your masterpiece will be meticulously packaged and delivered right to your doorstep.</p>
+              <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem' }}>We ensure safe, fully insured <strong>Pan-India delivery within 7 working days</strong>. Your masterpiece will be meticulously packaged and delivered right to your doorstep.</p>
             </div>
             <div style={{ padding: '2.5rem 1.5rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', borderTop: '3px solid var(--color-accent)' }}>
               <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>Purchase Policy</h3>
-              <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem' }}>To maintain the exclusivity and pristine gallery condition of our handcrafted paintings, all sales are final. We maintain a strict **no return, no exchange** policy.</p>
+              <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem' }}>To maintain the exclusivity and pristine gallery condition of our handcrafted paintings, all sales are final. We maintain a strict <strong>no return, no exchange</strong> policy.</p>
             </div>
           </div>
         </section>
@@ -161,9 +176,9 @@ function App() {
           </div>
           
           <div style={{ marginTop: '3rem', display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
-            <a href="mailto:contact@dhanshuarts.com" className="btn" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem', padding: '14px 32px' }}>
-              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-              Email Us
+            <a href="https://wa.me/919760046127" target="_blank" rel="noopener noreferrer" className="btn" style={{ backgroundColor: '#25D366', color: 'white', border: '2px solid #25D366', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '1.1rem', padding: '12px 24px' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564c.173.087.289.129.332.202.043.073.043.423-.101.827z"></path></svg>
+              Message on WhatsApp
             </a>
             <a href="tel:+919760046127" className="btn" style={{ backgroundColor: 'white', color: 'var(--color-primary)', border: '2px solid var(--color-primary)', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '1.1rem', padding: '12px 24px' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>

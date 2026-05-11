@@ -88,9 +88,9 @@ function App() {
                   <div className="painting-info">
                     <h3 className="painting-title">{painting.title}</h3>
                     <p className="painting-medium">{painting.medium}</p>
-                    <button className="btn" style={{ marginTop: '1rem', width: '100%', fontSize: '0.9rem', padding: '8px' }}>
+                    <a href={`mailto:contact@dhanshuarts.com?subject=Inquiry: ${painting.title}`} className="btn" style={{ marginTop: '1rem', width: '100%', fontSize: '0.9rem', padding: '10px', display: 'inline-block', textAlign: 'center', boxSizing: 'border-box' }}>
                       Inquire Details
-                    </button>
+                    </a>
                   </div>
                 </div>
               ))}
@@ -112,6 +112,36 @@ function App() {
                 Each piece is created using techniques rooted in ancient traditions—from grinding natural stones for colors to using genuine gold foils. We believe art is not just decoration; it's a blessing for your home.
               </p>
             </div>
+          </div>
+        </section>
+        <section id="contact" className="section container" style={{ backgroundColor: 'white', padding: '4rem 2rem', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', marginBottom: '4rem', textAlign: 'center', borderTop: '4px solid var(--color-accent)' }}>
+          <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem', color: 'var(--color-secondary)' }}>Visit Our Studio</h2>
+          <p style={{ fontSize: '1.2rem', color: 'var(--color-text-light)', marginBottom: '2.5rem', maxWidth: '600px', margin: '0 auto 2.5rem' }}>
+            We'd love to welcome you. Experience the rich heritage of our artwork in person or reach out for commissions and inquiries.
+          </p>
+          
+          <div style={{ display: 'inline-flex', alignItems: 'center', gap: '20px', backgroundColor: 'var(--color-bg)', padding: '1.5rem 2.5rem', borderRadius: '15px', boxShadow: 'var(--box-shadow-hover)', border: '1px solid rgba(0,0,0,0.05)', flexWrap: 'wrap', justifyContent: 'center' }}>
+            <div style={{ backgroundColor: 'white', padding: '15px', borderRadius: '50%', display: 'flex', alignItems: 'center', justifyContent: 'center', boxShadow: '0 4px 10px rgba(0,0,0,0.05)' }}>
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+            <div style={{ textAlign: 'left' }}>
+              <strong style={{ display: 'block', color: 'var(--color-text)', fontSize: '1.3rem', marginBottom: '4px' }}>DhAnshu Arts</strong>
+              <span style={{ color: 'var(--color-text-light)', fontSize: '1.1rem', lineHeight: '1.5' }}>Near Bajaj World, Girital Road,<br/>Kashipur, Uttarakhand, India.</span>
+            </div>
+          </div>
+          
+          <div style={{ marginTop: '3rem', display: 'flex', justifyContent: 'center', gap: '1.5rem', flexWrap: 'wrap' }}>
+            <a href="mailto:contact@dhanshuarts.com" className="btn" style={{ display: 'inline-flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem', padding: '14px 32px' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+              Email Us
+            </a>
+            <a href="#contact" className="btn" style={{ backgroundColor: 'white', color: 'var(--color-primary)', border: '2px solid var(--color-primary)', display: 'inline-flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem', padding: '12px 32px' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Call Us
+            </a>
           </div>
         </section>
       </main>

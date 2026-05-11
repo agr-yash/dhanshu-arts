@@ -119,7 +119,7 @@ function App() {
                 Founded by Anshu and Dheeraj Agarwal—a lovely couple united by their profound love for art—DhAnshu Arts is a testament to India's rich cultural legacy. For over three decades, they have dedicated their lives to preserving and promoting traditional art forms. What started as a shared passion has blossomed into a magnificent collection of exquisite handmade paintings.
               </p>
               <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)' }}>
-                Together, they ensure every piece is created using techniques rooted in ancient traditions—from grinding natural stones for colors to delicately applying genuine gold foils. To Anshu and Dheeraj, art is not just decoration; it's a blessing and a piece of history for your home.
+                Together, they ensure every single masterpiece is entirely <strong>handmade</strong> using techniques rooted in ancient traditions—from grinding natural stones for colors to delicately applying genuine gold foils by hand. To Anshu and Dheeraj, this handmade art is not just decoration; it's a blessing and a timeless piece of history for your home.
               </p>
             </div>
           </div>

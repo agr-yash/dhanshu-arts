@@ -22,19 +22,22 @@ function App() {
     {
       id: 1,
       title: 'The Tree of Life',
-      medium: 'Natural Dyes on Handmade Paper',
+      medium: 'Madhubani Style • Natural Dyes on Handmade Paper',
+      price: '₹5,500 INR',
       img: '/painting1.png'
     },
     {
       id: 2,
       title: 'Royal Procession',
-      medium: 'Gold Foil and Poster Color on Silk',
+      medium: 'Tanjore Art • Gold Foil and Poster Color on Silk',
+      price: '₹12,000 INR',
       img: '/painting2.png'
     },
     {
       id: 3,
       title: 'Divine Lotus Pond',
-      medium: 'Watercolors on Canvas',
+      medium: 'Traditional Watercolor • Fine Canvas',
+      price: '₹8,200 INR',
       img: '/painting3.png'
     }
   ];
@@ -92,8 +95,11 @@ function App() {
                   <div className="painting-info">
                     <h3 className="painting-title">{painting.title}</h3>
                     <p className="painting-medium">{painting.medium}</p>
-                    <a href={`mailto:contact@dhanshuarts.com?subject=Inquiry: ${painting.title}`} className="btn" style={{ marginTop: '1rem', width: '100%', fontSize: '0.9rem', padding: '10px', display: 'inline-block', textAlign: 'center', boxSizing: 'border-box' }}>
-                      Inquire Details
+                    <div style={{ fontSize: '1.4rem', fontWeight: 'bold', color: 'var(--color-primary)', marginTop: '0.8rem', letterSpacing: '0.5px' }}>
+                      {painting.price}
+                    </div>
+                    <a href={`mailto:contact@dhanshuarts.com?subject=Purchase Inquiry: ${painting.title}`} className="btn" style={{ marginTop: '1rem', width: '100%', fontSize: '0.9rem', padding: '10px', display: 'inline-block', textAlign: 'center', boxSizing: 'border-box', fontWeight: 'bold' }}>
+                      Purchase Inquiry
                     </a>
                   </div>
                 </div>

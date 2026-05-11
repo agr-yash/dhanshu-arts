@@ -106,11 +106,28 @@ function App() {
             <div style={{ flex: 1, minWidth: '300px' }}>
               <h2 style={{ fontSize: '2.5rem' }}>Our Heritage</h2>
               <p style={{ fontSize: '1.1rem', marginBottom: '1.5rem', color: 'var(--color-text-light)' }}>
-                For over three decades, my mother has dedicated her life to preserving the traditional art forms of India. What started as a passion has blossomed into a legacy of exquisite handmade paintings.
+                Founded by Anshu and Dheeraj Agarwal—a lovely couple united by their profound love for art—DhAnshu Arts is a testament to India's rich cultural legacy. For over three decades, they have dedicated their lives to preserving and promoting traditional art forms. What started as a shared passion has blossomed into a magnificent collection of exquisite handmade paintings.
               </p>
               <p style={{ fontSize: '1.1rem', color: 'var(--color-text-light)' }}>
-                Each piece is created using techniques rooted in ancient traditions—from grinding natural stones for colors to using genuine gold foils. We believe art is not just decoration; it's a blessing for your home.
+                Together, they ensure every piece is created using techniques rooted in ancient traditions—from grinding natural stones for colors to delicately applying genuine gold foils. To Anshu and Dheeraj, art is not just decoration; it's a blessing and a piece of history for your home.
               </p>
+            </div>
+          </div>
+        </section>
+
+        <section id="policies" className="section container" style={{ marginTop: '2rem', marginBottom: '4rem' }}>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem', textAlign: 'center' }}>
+            <div style={{ padding: '2.5rem 1.5rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', borderTop: '3px solid var(--color-accent)' }}>
+              <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>Transparent Pricing</h3>
+              <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem' }}>Our authentic art pieces are fairly and transparently priced, reflecting hundreds of hours of intricate craftsmanship and the use of premium, genuine materials.</p>
+            </div>
+            <div style={{ padding: '2.5rem 1.5rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', borderTop: '3px solid var(--color-accent)' }}>
+              <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>Fast Delivery</h3>
+              <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem' }}>We ensure safe, fully insured **Pan-India delivery within 7 working days**. Your masterpiece will be meticulously packaged and delivered right to your doorstep.</p>
+            </div>
+            <div style={{ padding: '2.5rem 1.5rem', backgroundColor: 'white', borderRadius: 'var(--border-radius)', boxShadow: 'var(--box-shadow)', borderTop: '3px solid var(--color-accent)' }}>
+              <h3 style={{ fontSize: '1.5rem', color: 'var(--color-primary)', marginBottom: '1rem' }}>Purchase Policy</h3>
+              <p style={{ color: 'var(--color-text-light)', fontSize: '1.05rem' }}>To maintain the exclusivity and pristine gallery condition of our handcrafted paintings, all sales are final. We maintain a strict **no return, no exchange** policy.</p>
             </div>
           </div>
         </section>
@@ -138,9 +155,13 @@ function App() {
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
               Email Us
             </a>
-            <a href="#contact" className="btn" style={{ backgroundColor: 'white', color: 'var(--color-primary)', border: '2px solid var(--color-primary)', display: 'inline-flex', alignItems: 'center', gap: '10px', fontSize: '1.1rem', padding: '12px 32px' }}>
+            <a href="tel:+919760046127" className="btn" style={{ backgroundColor: 'white', color: 'var(--color-primary)', border: '2px solid var(--color-primary)', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '1.1rem', padding: '12px 24px' }}>
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-              Call Us
+              Anshu: +91 9760046127
+            </a>
+            <a href="tel:+919897646127" className="btn" style={{ backgroundColor: 'white', color: 'var(--color-primary)', border: '2px solid var(--color-primary)', display: 'inline-flex', alignItems: 'center', gap: '8px', fontSize: '1.1rem', padding: '12px 24px' }}>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+              Dheeraj: +91 9897646127
             </a>
           </div>
         </section>

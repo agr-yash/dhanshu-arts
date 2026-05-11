@@ -41,7 +41,8 @@ function App() {
 
   return (
     <>
-      <div className="container">
+      <div className="hero-wrapper">
+        <div className="container" style={{ position: 'relative', zIndex: 10 }}>
         <nav className="navbar" style={{ padding: scrolled ? '1rem 0' : '2rem 0', transition: 'all 0.3s ease' }}>
           <div className="navbar-logo" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
             <img src="/logo.png" alt="DhAnshu Arts Logo" style={{ height: '45px', width: 'auto', mixBlendMode: 'multiply' }} />
@@ -57,12 +58,13 @@ function App() {
       </div>
 
       <main>
-        <section id="home" className="section container">
+        <section id="home" className="section container" style={{ paddingTop: '2rem' }}>
           <div className="hero">
-            <div className="hero-content">
+            <div className="hero-content glass-panel">
+              <span style={{ display: 'inline-block', marginBottom: '1rem', color: 'var(--color-primary)', fontWeight: 'bold', letterSpacing: '2px', textTransform: 'uppercase', fontSize: '0.9rem' }}>The Essence of Devbhoomi</span>
               <h1 className="hero-title">Timeless Art,<br/>Handcrafted with Love.</h1>
               <p className="hero-subtitle">
-                Discover exclusive, traditional Indian paintings. Every stroke tells a story of heritage, spirituality, and meticulous craftsmanship passed down through generations.
+                Discover exclusive, traditional Indian paintings inspired by the serene beauty of Uttarakhand. Every stroke tells a story of heritage, spirituality, and meticulous craftsmanship passed down through generations.
               </p>
               <a href="#gallery" className="btn">Explore Gallery</a>
             </div>
@@ -71,6 +73,7 @@ function App() {
             </div>
           </div>
         </section>
+      </div>
 
         <section id="gallery" className="gallery-section section">
           <div className="container">

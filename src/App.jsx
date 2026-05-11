@@ -9,6 +9,7 @@ const BrandName = () => (
 
 function App() {
   const [scrolled, setScrolled] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -117,7 +118,7 @@ function App() {
             <div className="gallery-grid">
               {paintings.map((painting, index) => (
                 <div key={painting.id} className={`painting-card animate-on-scroll fade-up stagger-${(index % 5) + 1}`}>
-                  <div className="painting-img-wrapper">
+                  <div className="painting-img-wrapper" onClick={() => setSelectedImage(painting.img)}>
                     <img src={painting.img} alt={painting.title} />
                   </div>
                   <div className="painting-info">
@@ -216,6 +217,34 @@ function App() {
           <p style={{ marginTop: '0.5rem' }}>Handcrafted in India</p>
         </div>
       </footer>
+
+      {selectedImage && (
+        <div 
+          onClick={() => setSelectedImage(null)}
+          style={{
+            position: 'fixed', top: 0, left: 0, right: 0, bottom: 0,
+            backgroundColor: 'rgba(0, 0, 0, 0.92)',
+            zIndex: 9999,
+            display: 'flex', justifyContent: 'center', alignItems: 'center',
+            cursor: 'zoom-out', padding: '2rem'
+          }}
+        >
+          <img 
+            src={selectedImage} 
+            alt="Fullscreen view" 
+            style={{
+              maxHeight: '100%', maxWidth: '100%',
+              objectFit: 'contain',
+              boxShadow: '0 0 50px rgba(255,255,255,0.1)',
+              borderRadius: '8px',
+              animation: 'fadeScale 0.3s ease-out forwards'
+            }} 
+          />
+          <div style={{ position: 'absolute', top: '20px', right: '30px', color: 'white', fontSize: '3rem', fontWeight: 'bold', cursor: 'pointer', textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
+            &times;
+          </div>
+        </div>
+      )}
     </>
   );
 }
